@@ -52,7 +52,7 @@ var book4 = {
 };
 
 var books = [ book1, book2, book3, book4 ];
-
+var i = 0;
 var generateItem = function generateItem( product ){
     $( "#book" + product.id + " h1" ).text( product.name );
     $( "#book" + product.id + " h2" ).text( product.author );
@@ -61,8 +61,8 @@ var generateItem = function generateItem( product ){
     $( "#book" + product.id + " ul" ).text( product.selling_points );
     $( "#book" + product.id + " span" ).text( product.id );
 };
-
-generateItem( book1 );
-generateItem( book2 );
-generateItem( book3 );
-generateItem( book4 );
+while (i<books.length) {
+  generateItem(books[i]);
+  console.log(books[i].name);
+  i++;
+}
