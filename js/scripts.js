@@ -51,6 +51,8 @@ var book4 = {
     ]
 };
 
+var books = [ book1, book2, book3, book4 ];
+
 var generateItem = function generateItem( product ){
     $( "#book" + product.id + " h1" ).text( product.name );
     $( "#book" + product.id + " h2" ).text( product.author );
